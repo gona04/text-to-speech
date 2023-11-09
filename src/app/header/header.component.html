@@ -1,7 +1,7 @@
 <div>
   <ul style="display: flex; justify-content: space-between; margin: 0.5rem 2rem 0 1rem;">
     <li style="list-style-type: none;" [routerLink]="['home']">Home</li>
-    <li style="list-style-type: none;" *ngIf="!isUserLoggedIn" (click)="login()" >Login</li>
-    <li style="list-style-type: none;" *ngIf="isUserLoggedIn" (click)="logout()">Logout</li>
+    <li style="list-style-type: none;" *ngIf="isUserLoggedIn" (click)="login()" >Login</li>
+    <li style="list-style-type: none;" *ngIf="!isUserLoggedIn" (click)="logout()">Logout</li>
   </ul>
 </div>
