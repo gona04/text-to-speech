@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VoiceRecorderService } from '../voice-recorder.service';
+import { AzureAdDemoService } from '../azure-ad-demo.service';
 
 @Component({
   selector: 'app-voice-recorder',
@@ -9,7 +10,8 @@ import { VoiceRecorderService } from '../voice-recorder.service';
 export class VoiceRecorderComponent implements OnInit {
 
   displayText: string = "";
-  constructor( private _voiceService: VoiceRecorderService) {
+  constructor( private _voiceService: VoiceRecorderService,
+      private azureADDemoService: AzureAdDemoService) {
   }
 
   ngOnInit(): void {
