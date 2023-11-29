@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VoiceRecorderService } from '../voice-recorder.service';
 import { AzureAdDemoService } from '../azure-ad-demo.service';
+import { VoiceRecognitionServiceService } from '../voice-recognition-service.service';
 
 @Component({
   selector: 'app-voice-recorder',
@@ -9,32 +10,32 @@ import { AzureAdDemoService } from '../azure-ad-demo.service';
 })
 export class VoiceRecorderComponent implements OnInit {
 
-  displayText: string = "";
-  constructor( private _voiceService: VoiceRecorderService,
-      private azureADDemoService: AzureAdDemoService) {
+  text: string = "";
+  constructor( public _voiceRecognitionService: VoiceRecognitionServiceService) {
+    this._voiceRecognitionService.init()
   }
 
   ngOnInit(): void {
   }
 
   startService() {
-    console.log("Start called");
+    this._voiceRecognitionService.start();
   }
 
   stopService() {
-    console.log("Stop called");
+    this._voiceRecognitionService.stop();
   }
 
-  uploadAudio(audioUploaded: any) {
-    console.log(audioUploaded);
+  // uploadAudio(audioUploaded: any) {
+  //   console.log(audioUploaded);
 
-    let files: FileList = audioUploaded.target.files;
-    let file : File = files[0];
-    this._voiceService.submitVocalFile(file).subscribe(result => {
-      // console.log(result);
-      this.displayText = result.DisplayText;
-      console.log(this.displayText);
-    })
-  }
+  //   let files: FileList = audioUploaded.target.files;
+  //   let file : File = files[0];
+  //   this._voiceService.submitVocalFile(file).subscribe(result => {
+  //     // console.log(result);
+  //     this.displayText = result.DisplayText;
+  //     console.log(this.displayText);
+  //   })
+  // }
 
 }
