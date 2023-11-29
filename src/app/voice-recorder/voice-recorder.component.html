@@ -1,14 +1,15 @@
-<div style="display: flex; width:100; flex-direction: column; align-items: center; justify-content: top; height:50vh;" class="mt-5">
-  <h1> Voice to text app in Angular </h1>
-<div style="display: flex; width:20%; justify-content: space-between;">
+<main class="mt-5">
+  <h1> Tell me what to write... </h1>
+  <b> A diary that will write for you </b>
+<div class="main-body">
   <!-- <button (click)="startService()" class="btn btn-secondary">Start</button>
   <button (click)="stopService()" class="btn btn-secondary">Stop</button> -->
   <input type="file" name="audio-file" id="audio-file" >
 </div>
-</div>
+</main>
 
 
-<div style="width:100vw; display: flex; justify-content: center;">
+<div class="result">
   Result:
   {{displayText}}
 </div>
