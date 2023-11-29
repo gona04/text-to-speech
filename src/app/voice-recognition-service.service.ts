@@ -7,11 +7,9 @@ declare var webkitSpeechRecognition: any;
 })
 export class VoiceRecognitionServiceService {
   recognition = new webkitSpeechRecognition();
-  isRecognitionRunning = false;
-  isStoppedSpeechRecord = false;
+  isStoppedSpeechRecord = true;
   public text = "";
   tempWords: any;
-  private lastRecognitionEvent: any;
 
   constructor() {
     this.init();
@@ -22,7 +20,6 @@ export class VoiceRecognitionServiceService {
     this.recognition.lang = 'en-US';
 
     this.recognition.addEventListener('result', (e: any) => {
-      this.lastRecognitionEvent = e; // Store the event for later use
       const transcript = Array.from(e.results)
         .map((result: any) => result[0])
         .map((result: any) => result.transcript)
@@ -34,49 +31,31 @@ export class VoiceRecognitionServiceService {
         this.wordConcat();
       }
     });
-
-    this.recognition.addEventListener('end', () => {
-      if (!this.isStoppedSpeechRecord) {
-        this.startRecognition();
-      }
-    });
   }
 
-  startRecognition() {
-    if (!this.isRecognitionRunning) {
-      this.isRecognitionRunning = true;
-      this.isStoppedSpeechRecord = false;
-      this.recognition.start();
-    }
-  }
+
 
   start() {
     this.isStoppedSpeechRecord = false;
-    this.startRecognition();
+    this.recognition.interimResults = false;
+    this.recognition.continuous = true;
+    this.recognition.start();
+    this.recognition.addEventListener("end", (condition: any) => {
+      if(this.isStoppedSpeechRecord) {
+        this.recognition.stop();
+      } else {
+        this.wordConcat();
+        this.recognition.start();
+      }
+    })
   }
 
   wordConcat() {
-    const currentTranscript = this.tempWords.trim();
-
-    // Log the entire results object for further analysis
-    console.log("Results object:", this.lastRecognitionEvent.results);
-
-    // Check if the current transcript is different from the previous one
-    if (currentTranscript !== "") {
-      this.text += (this.text.length > 0 ? ' ' : '') + currentTranscript;
-    }
-
-    this.tempWords = "";
+  this.text = this.tempWords + ". ";
   }
-
-
-
-
-
 
   stop() {
     this.isStoppedSpeechRecord = true;
-    this.isRecognitionRunning = false;
     this.recognition.stop();
     console.log("End speech from stop method");
   }

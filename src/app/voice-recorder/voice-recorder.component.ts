@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { VoiceRecorderService } from '../voice-recorder.service';
-import { AzureAdDemoService } from '../azure-ad-demo.service';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { VoiceRecognitionServiceService } from '../voice-recognition-service.service';
 
 @Component({
@@ -11,8 +9,9 @@ import { VoiceRecognitionServiceService } from '../voice-recognition-service.ser
 export class VoiceRecorderComponent implements OnInit {
 
   text: string = "";
-  constructor( public _voiceRecognitionService: VoiceRecognitionServiceService) {
-    this._voiceRecognitionService.init()
+
+  constructor(public _voiceRecognitionService: VoiceRecognitionServiceService, private cdr: ChangeDetectorRef) {
+    this._voiceRecognitionService.init();
   }
 
   ngOnInit(): void {
@@ -24,18 +23,6 @@ export class VoiceRecorderComponent implements OnInit {
 
   stopService() {
     this._voiceRecognitionService.stop();
+    this.cdr.detectChanges();
   }
-
-  // uploadAudio(audioUploaded: any) {
-  //   console.log(audioUploaded);
-
-  //   let files: FileList = audioUploaded.target.files;
-  //   let file : File = files[0];
-  //   this._voiceService.submitVocalFile(file).subscribe(result => {
-  //     // console.log(result);
-  //     this.displayText = result.DisplayText;
-  //     console.log(this.displayText);
-  //   })
-  // }
-
 }
