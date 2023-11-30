@@ -1,9 +1,18 @@
 <main class="mt-5">
   <h1> Tell me what to write... </h1>
   <b> A diary that will write for you </b>
-  <div class="main-body">
-    <button (click)="startService()" class="btn btn-secondary">Start</button>
-    <button (click)="stopService()" class="btn btn-secondary">Stop</button>
+
+  <div style="display: flex; flex-direction: column; margin-top: 4rem;" *ngIf="isLive === undefined">
+    Choose how to you want me to write?
+   <div style="display: flex; justify-content: space-evenly;margin-top: 2rem;">
+    <button class="btn btn-secondary" (click)="speekLive(false)" >Upload audio</button>
+    <button class="btn btn-secondary" (click)="speekLive(true)"> Speek Live </button>
+   </div>
+  </div>
+  <div class="main-body" *ngIf="isLive !== undefined">
+    <input *ngIf="isLive === false" type="file" name="audio-file" id="audio-file" >
+    <button (click)="startService()" *ngIf="isLive" class="btn btn-secondary">Start</button>
+    <button (click)="stopService()" *ngIf="isLive" class="btn btn-secondary">Stop</button>
   </div>
 </main>
 
@@ -12,5 +21,8 @@
   <br>
   <div class="card" *ngIf="_voiceRecognitionService.text.length > 0">
     {{_voiceRecognitionService.text}}
+  </div>
+  <div class="card" *ngIf="displayText.length > 0">
+    {{displayText}}
   </div>
 </div>

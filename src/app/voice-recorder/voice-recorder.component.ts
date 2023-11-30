@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { VoiceRecognitionServiceService } from '../voice-recognition-service.service';
+import { VoiceRecorderService } from '../voice-recorder.service';
 
 @Component({
   selector: 'app-voice-recorder',
@@ -8,9 +9,10 @@ import { VoiceRecognitionServiceService } from '../voice-recognition-service.ser
 })
 export class VoiceRecorderComponent implements OnInit {
 
-  text: string = "";
-
-  constructor(public _voiceRecognitionService: VoiceRecognitionServiceService, private cdr: ChangeDetectorRef) {
+  displayText: string = "";
+  isLive!: boolean;
+  constructor(public _voiceRecognitionService: VoiceRecognitionServiceService, private cdr: ChangeDetectorRef,
+    private _voiceService: VoiceRecorderService) {
     this._voiceRecognitionService.init();
   }
 
@@ -24,5 +26,21 @@ export class VoiceRecorderComponent implements OnInit {
   stopService() {
     this._voiceRecognitionService.stop();
     this.cdr.detectChanges();
+  }
+
+  uploadAudio(audioUploaded: any) {
+    console.log(audioUploaded);
+
+    let files: FileList = audioUploaded.target.files;
+    let file : File = files[0];
+    this._voiceService.submitVocalFile(file).subscribe(result => {
+      // console.log(result);
+      this.displayText = result.DisplayText;
+      console.log(this.displayText);
+    })
+  }
+
+  speekLive(value: boolean) {
+    this.isLive = value;
   }
 }
