@@ -9,6 +9,8 @@ import { MsalGuard, MsalInterceptor, MsalModule, MsalRedirectComponent } from '@
 import { InteractionType, PublicClientApplication } from '@azure/msal-browser';
 import { HeaderComponent } from './header/header.component';
 import { AzureAdDemoService } from './azure-ad-demo.service';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,11 @@ import { AzureAdDemoService } from './azure-ad-demo.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     HttpClientModule,
+    AngularEditorModule,
     MsalModule.forRoot(new PublicClientApplication
       (
         {
