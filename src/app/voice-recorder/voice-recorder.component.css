@@ -19,3 +19,12 @@ main {
   display: flex;
   justify-content: center;
 }
+
+.card {
+  border: 1px solid #c9c9c9;
+  width: 90vw;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 1px 1px 0px;
+  border-radius: 2px;
+}

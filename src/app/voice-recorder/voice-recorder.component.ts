@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { VoiceRecognitionServiceService } from '../voice-recognition-service.service';
 import { VoiceRecorderService } from '../voice-recorder.service';
-import { AzureAdDemoService } from '../azure-ad-demo.service';
 
 @Component({
   selector: 'app-voice-recorder',
@@ -10,19 +10,22 @@ import { AzureAdDemoService } from '../azure-ad-demo.service';
 export class VoiceRecorderComponent implements OnInit {
 
   displayText: string = "";
-  constructor( private _voiceService: VoiceRecorderService,
-      private azureADDemoService: AzureAdDemoService) {
+  isLive!: boolean;
+  constructor(public _voiceRecognitionService: VoiceRecognitionServiceService, private cdr: ChangeDetectorRef,
+    private _voiceService: VoiceRecorderService) {
+    this._voiceRecognitionService.init();
   }
 
   ngOnInit(): void {
   }
 
   startService() {
-    console.log("Start called");
+    this._voiceRecognitionService.start();
   }
 
   stopService() {
-    console.log("Stop called");
+    this._voiceRecognitionService.stop();
+    this.cdr.detectChanges();
   }
 
   uploadAudio(audioUploaded: any) {
@@ -37,4 +40,7 @@ export class VoiceRecorderComponent implements OnInit {
     })
   }
 
+  speekLive(value: boolean) {
+    this.isLive = value;
+  }
 }
