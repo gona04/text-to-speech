@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { VoiceRecognitionServiceService } from '../voice-recognition-service.service';
 import { VoiceRecorderService } from '../voice-recorder.service';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 @Component({
   selector: 'app-voice-recorder',
@@ -10,7 +11,21 @@ import { VoiceRecorderService } from '../voice-recorder.service';
 export class VoiceRecorderComponent implements OnInit {
 
   displayText: string = "";
+  // editorText: any = '';
   isLive!: boolean;
+
+  config: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: '15rem',
+    minHeight: '5rem',
+    placeholder: 'Whatever you speak can be edited here...',
+    translate: 'no',
+    defaultParagraphSeparator: 'p',
+    defaultFontName: 'Arial',
+
+  };
+
   constructor(public _voiceRecognitionService: VoiceRecognitionServiceService, private cdr: ChangeDetectorRef,
     private _voiceService: VoiceRecorderService) {
     this._voiceRecognitionService.init();
