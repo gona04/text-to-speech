@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { VoiceRecognitionServiceService } from '../voice-recognition-service.service';
 import { VoiceRecorderService } from '../voice-recorder.service';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { EmotionalAnalyserService } from '../emotional-analyser.service';
 
 @Component({
   selector: 'app-voice-recorder',
@@ -26,8 +27,8 @@ export class VoiceRecorderComponent implements OnInit {
 
   };
 
-  constructor(public _voiceRecognitionService: VoiceRecognitionServiceService, private cdr: ChangeDetectorRef,
-    private _voiceService: VoiceRecorderService) {
+  constructor(public _voiceRecognitionService: VoiceRecognitionServiceService, public cdr: ChangeDetectorRef,
+    public _voiceService: VoiceRecorderService, public _emotionalAnalyserService: EmotionalAnalyserService) {
     this._voiceRecognitionService.init();
   }
 
@@ -57,5 +58,9 @@ export class VoiceRecorderComponent implements OnInit {
 
   speekLive(value: boolean) {
     this.isLive = value;
+  }
+
+  save() {
+    this._emotionalAnalyserService.sendTextForAnalysis(this._voiceRecognitionService.text)
   }
 }
