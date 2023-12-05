@@ -1,9 +1,12 @@
+// Import required modules and services for integration testing
 import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { of } from 'rxjs';
 import { VoiceRecorderComponent } from './voice-recorder.component';
 import { VoiceRecognitionServiceService } from '../voice-recognition-service.service';
 import { VoiceRecorderService } from '../voice-recorder.service';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 describe('VoiceRecorderComponent (Integration)', () => {
   let component: VoiceRecorderComponent;
@@ -16,7 +19,7 @@ describe('VoiceRecorderComponent (Integration)', () => {
         VoiceRecognitionServiceService,
         VoiceRecorderService
       ],
-      imports: [HttpClientModule]
+      imports: [HttpClientModule, AngularEditorModule, FormsModule]
     }).compileComponents();
   }));
 
@@ -44,7 +47,7 @@ describe('VoiceRecorderComponent (Integration)', () => {
     expect(component.cdr.detectChanges).toHaveBeenCalled();
   });
 
-  it('should upload WAV audio file and update display text', () => {
+  it('should upload WAV audio file and update display text', (done: DoneFn) => {
     const wavFile = new File([''], 'test-audio-file.wav', { type: 'audio/wav' });
     const audioUploaded = {
       target: {
@@ -62,9 +65,12 @@ describe('VoiceRecorderComponent (Integration)', () => {
 
     component.uploadAudio(audioUploaded);
 
-    expect(component._voiceService.submitVocalFile).toHaveBeenCalledWith(jasmine.any(File));
-    expect(component.displayText).toEqual('Test Display Text');
-    expect(component._voiceRecognitionService.stop).not.toHaveBeenCalled();
-    expect(component.cdr.detectChanges).not.toHaveBeenCalled();
+    setTimeout(() => {
+      expect(component._voiceService.submitVocalFile).toHaveBeenCalledWith(jasmine.any(File));
+      expect(component.displayText).toEqual('Test Display Text');
+      expect(component._voiceRecognitionService.stop).not.toHaveBeenCalled();
+      expect(component.cdr.detectChanges).not.toHaveBeenCalled();
+      done();
+    });
   });
 });

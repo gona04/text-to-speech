@@ -45,6 +45,7 @@ export class VoiceRecorderComponent implements OnInit {
   }
 
   uploadAudio(audioUploaded: any) {
+    alert("Audio uploaded")
     console.log(audioUploaded);
 
     let files: FileList = audioUploaded.target.files;
