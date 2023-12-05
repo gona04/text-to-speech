@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { AzureAdDemoService } from './azure-ad-demo.service';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { FormsModule } from '@angular/forms';
+import { AudioToTextModule } from 'audio-to-text';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     AngularEditorModule,
+    AudioToTextModule,
     MsalModule.forRoot(new PublicClientApplication
       (
         {
