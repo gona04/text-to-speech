@@ -158,6 +158,37 @@
           }
         }
       }
+    },
+    "audio-to-text": {
+      "projectType": "library",
+      "root": "projects/audio-to-text",
+      "sourceRoot": "projects/audio-to-text/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/audio-to-text/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/audio-to-text/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/audio-to-text/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/audio-to-text/src/test.ts",
+            "tsConfig": "projects/audio-to-text/tsconfig.spec.json",
+            "karmaConfig": "projects/audio-to-text/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "cli": {

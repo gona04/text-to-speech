@@ -12,11 +12,8 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "library-text-to-speech": [
-        "dist/library-text-to-speech"
-      ],
-      "my-shared-lib": [
-        "dist/my-shared-lib"
+      "audio-to-text": [
+        "dist/audio-to-text"
       ]
     },
     "declaration": false,
