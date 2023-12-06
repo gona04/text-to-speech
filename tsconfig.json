@@ -12,8 +12,8 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "audio-to-text": [
-        "dist/audio-to-text"
+      "audio-library": [
+        "dist/audio-library"
       ]
     },
     "declaration": false,
