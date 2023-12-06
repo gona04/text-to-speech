@@ -9,7 +9,7 @@ import { AudioLibraryComponent } from './audio-library.component';
 
 describe('AudioLibraryService', () => {
   let service: AudioLibraryService;
-  let component: AudioLibraryComponent; // Declare component here
+  let component: AudioLibraryComponent;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -21,7 +21,7 @@ describe('AudioLibraryService', () => {
 
   beforeEach(() => {
     let fixture = TestBed.createComponent(AudioLibraryComponent);
-    component = fixture.componentInstance; // Assign the component instance
+    component = fixture.componentInstance;
     fixture.detectChanges();
   });
 

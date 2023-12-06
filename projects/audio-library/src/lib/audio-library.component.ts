@@ -43,19 +43,15 @@ export class AudioLibraryComponent implements OnInit {
   }
 
   uploadAudio(audioUploaded: any) {
-    alert("Audio uploaded")
-    console.log(audioUploaded);
 
     let files: FileList = audioUploaded.target.files;
     let file : File = files[0];
     this._audioLibraryService.submitVocalFile(file).subscribe((result:any) => {
       this.displayText = result.DisplayText;
-      console.log(this.displayText);
     })
   }
 
   speekLive(value: boolean) {
-    console.log(value);
     this.isLive = value;
   }
 

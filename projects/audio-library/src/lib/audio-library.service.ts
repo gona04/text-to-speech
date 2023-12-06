@@ -44,7 +44,6 @@ export class AudioLibraryService {
         .join(' ');
 
       this.tempWords = transcript;
-      console.log(transcript);
       if (e.results[0].isFinal) {
         this.wordConcat();
       }
@@ -76,6 +75,5 @@ export class AudioLibraryService {
   stop() {
     this.isStoppedSpeechRecord = true;
     this.recognition.stop();
-    console.log("End speech from stop method");
   }
 }

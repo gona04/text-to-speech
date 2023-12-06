@@ -17,7 +17,6 @@ export class EmotionalAnalyserService {
   sendTextForAnalysis(text: string) {
     const document = [{ id: '1', text: text, language: 'en' }];
     this.http.post(this.url, {documents: document}, { headers: this.headers, responseType: 'json' }).subscribe(result => {
-      console.log(result);
     });
   }
 }
