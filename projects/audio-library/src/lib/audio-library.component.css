@@ -29,8 +29,9 @@
 }
 
 .editor-container {
+
   margin-top: 2rem;
-  width: 100%;
+  width: 80%;
 }
 
 .visually-hidden {
@@ -46,5 +47,11 @@
 
 .extreme-right{
   float: right;
-  margin:1rem 1rem;
+  margin:.6rem 0;
+}
+
+article {
+  padding-top: 1rem;
+  width: 95vw;
+  margin:auto;
 }
