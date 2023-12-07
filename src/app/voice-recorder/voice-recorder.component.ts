@@ -62,5 +62,8 @@ export class VoiceRecorderComponent implements OnInit {
 
   save() {
     this._emotionalAnalyserService.sendTextForAnalysis(this._voiceRecognitionService.text)
+    this._emotionalAnalyserService.savingDataAPI(this._voiceRecognitionService.text).subscribe(result => {
+      console.log(result);
+    })
   }
 }
