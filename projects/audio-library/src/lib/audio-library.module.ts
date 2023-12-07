@@ -4,8 +4,6 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-
-
 @NgModule({
   declarations: [
     AudioLibraryComponent

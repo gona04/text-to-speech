@@ -31,4 +31,8 @@
 
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\backend-libraries\StringLibrary\StringLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
