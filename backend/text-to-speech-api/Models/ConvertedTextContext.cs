@@ -9,5 +9,5 @@ public class ConvertedTextContext : DbContext
     {
     }
 
-    public DbSet<ConvertedText> ConvertedTextsItimes { get; set; } = null!;
+    public DbSet<ConvertedTextItem> ConvertedTextItem { get; set; } = null!;
 }
