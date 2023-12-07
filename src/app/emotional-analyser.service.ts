@@ -20,4 +20,14 @@ export class EmotionalAnalyserService {
       console.log(result);
     });
   }
+
+  savingDataAPI(text: string) {
+   let body =  {
+      "text": text,
+      "userName": "Goonja",
+      "createdAt": new Date().toISOString()
+    }
+    let url = "http://localhost:5103/api/ConvertedText"
+    return this.http.post(url, body)
+  }
 }
