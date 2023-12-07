@@ -19,4 +19,14 @@ export class EmotionalAnalyserService {
     this.http.post(this.url, {documents: document}, { headers: this.headers, responseType: 'json' }).subscribe(result => {
     });
   }
+
+  savingDataAPI(text: string) {
+   let body =  {
+      "text": text,
+      "userName": "Goonja",
+      "createdAt": new Date().toISOString()
+    }
+    let url = "http://localhost:5103/api/ConvertedText"
+    return this.http.post(url, body)
+  }
 }

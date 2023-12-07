@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8QelecfNjiLJEwvQlZcF42yAPkf77b5LxQCXH/+j1mg=",
+  "Source": "text-to-speech-api",
+  "BasePath": "_content/text-to-speech-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
