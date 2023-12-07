@@ -2,8 +2,8 @@ import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { MSAL_GUARD_CONFIG, MsalBroadcastService, MsalGuardConfiguration, MsalService } from '@azure/msal-angular';
 import { InteractionStatus, RedirectRequest } from '@azure/msal-browser';
 import { Subject, filter, takeUntil } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { AzureAdDemoService } from '../azure-ad-demo.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -38,6 +38,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   logout() {
-    this.authService.logoutRedirect({postLogoutRedirectUri: environment.postLogoutUrl});
+    this.authService.logoutRedirect({postLogoutRedirectUri:  "http://localhost:4200"});
   }
 }

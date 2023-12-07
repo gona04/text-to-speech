@@ -57,6 +57,12 @@ export class AudioLibraryComponent implements OnInit {
 
   save() {
     //this._emotionalAnalyserService.sendTextForAnalysis(this._voiceRecognitionService.text)
+    let currentText = new Map().set(true, this._audioLibraryService.text).set(false, this.displayText);
+    let text = currentText.get(this.isLive);
+    console.log(text + "is data for" + this.isLive);
+    this._audioLibraryService.postConvertedText(text).subscribe(result => {
+      console.dir(result);
+    });
   }
 
 }

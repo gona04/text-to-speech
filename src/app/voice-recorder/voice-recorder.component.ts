@@ -16,7 +16,5 @@ export class VoiceRecorderComponent implements OnInit {
 
   }
 
-  save() {
 
-  }
 }
