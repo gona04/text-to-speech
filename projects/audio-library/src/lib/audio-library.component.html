@@ -31,12 +31,12 @@
   </div>
 </main>
 
-<angular-editor
+<article>
+  <angular-editor
   [(ngModel)]="_audioLibraryService.text || displayText"
   [config]="config"
   class="editor-container"
   aria-label="Voice Recognition Editor"
 ></angular-editor>
-<article>
 <button class="btn btn-warning extreme-right" (click)="save()">Save</button>
 </article>
