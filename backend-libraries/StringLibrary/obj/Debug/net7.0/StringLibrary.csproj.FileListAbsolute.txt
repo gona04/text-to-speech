@@ -1,0 +1,12 @@
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/bin/Debug/net7.0/StringLibrary.deps.json
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/bin/Debug/net7.0/StringLibrary.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/bin/Debug/net7.0/StringLibrary.pdb
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/obj/Debug/net7.0/StringLibrary.csproj.AssemblyReference.cache
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/obj/Debug/net7.0/StringLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/obj/Debug/net7.0/StringLibrary.AssemblyInfoInputs.cache
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/obj/Debug/net7.0/StringLibrary.AssemblyInfo.cs
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/obj/Debug/net7.0/StringLibrary.csproj.CoreCompileInputs.cache
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/obj/Debug/net7.0/StringLibrary.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/obj/Debug/net7.0/refint/StringLibrary.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/obj/Debug/net7.0/StringLibrary.pdb
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/obj/Debug/net7.0/ref/StringLibrary.dll

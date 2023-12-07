@@ -281,3 +281,5 @@
 /Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/obj/Debug/net7.0/text-to-speech-api.pdb
 /Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/obj/Debug/net7.0/text-to-speech-api.genruntimeconfig.cache
 /Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/obj/Debug/net7.0/ref/text-to-speech-api.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/bin/Debug/net7.0/StringLibrary.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/bin/Debug/net7.0/StringLibrary.pdb

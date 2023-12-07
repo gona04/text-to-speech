@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using text_to_speech_api.Models;
+using UtilityLibraries;
 
 namespace text_to_speech_api.Controllers
 {
@@ -95,6 +96,9 @@ namespace text_to_speech_api.Controllers
         [HttpPost]
         public async Task<ActionResult<ConvertedTextItem>> PostConvertedTextItem(ConvertedTextItem convertedTextItem)
         {
+          String input = convertedTextItem.Text;
+           Console.WriteLine("Begins with uppercase? " +
+                 $"{(input.StartsWithUpper() ? "Yes" : "No")}");
             // Additional server-side validation
             if (string.IsNullOrEmpty(convertedTextItem.Text))
             {

@@ -56,6 +56,7 @@ export class AudioLibraryComponent implements OnInit {
   }
 
   save() {
+
     //this._emotionalAnalyserService.sendTextForAnalysis(this._voiceRecognitionService.text)
   }
 
