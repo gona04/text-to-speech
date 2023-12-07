@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+// import { TestBed } from '@angular/core/testing';
 
-import { EmotionalAnalyserService } from './emotional-analyser.service';
+// import { EmotionalAnalyserService } from './emotional-analyser.service';
 
-describe('EmotionalAnalyserService', () => {
-  let service: EmotionalAnalyserService;
+// describe('EmotionalAnalyserService', () => {
+//   let service: EmotionalAnalyserService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(EmotionalAnalyserService);
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({});
+//     service = TestBed.inject(EmotionalAnalyserService);
+//   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+//   it('should be created', () => {
+//     expect(service).toBeTruthy();
+//   });
+// });

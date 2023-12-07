@@ -4,19 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { VoiceRecorderComponent } from './voice-recorder/voice-recorder.component';
 import { MsalGuard, MsalInterceptor, MsalModule, MsalRedirectComponent } from '@azure/msal-angular';
 import { InteractionType, PublicClientApplication } from '@azure/msal-browser';
-import { HeaderComponent } from './header/header.component';
 import { AzureAdDemoService } from './azure-ad-demo.service';
-import { AngularEditorModule } from '@kolkov/angular-editor';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { AudioLibraryModule } from 'projects/audio-library/src/public-api';
+import { VoiceRecorderComponent } from './voice-recorder/voice-recorder.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    VoiceRecorderComponent,
-    HeaderComponent
+    HeaderComponent,
+    VoiceRecorderComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularEditorModule,
+    AudioLibraryModule,
     MsalModule.forRoot(new PublicClientApplication
       (
         {

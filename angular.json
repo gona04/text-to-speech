@@ -96,6 +96,130 @@
           }
         }
       }
+    },
+    "my-shared-lib": {
+      "projectType": "library",
+      "root": "projects/my-shared-lib",
+      "sourceRoot": "projects/my-shared-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/my-shared-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/my-shared-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/my-shared-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/my-shared-lib/src/test.ts",
+            "tsConfig": "projects/my-shared-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/my-shared-lib/karma.conf.js"
+          }
+        }
+      }
+    },
+    "library-text-to-speech": {
+      "projectType": "library",
+      "root": "projects/library-text-to-speech",
+      "sourceRoot": "projects/library-text-to-speech/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/library-text-to-speech/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/library-text-to-speech/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/library-text-to-speech/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/library-text-to-speech/src/test.ts",
+            "tsConfig": "projects/library-text-to-speech/tsconfig.spec.json",
+            "karmaConfig": "projects/library-text-to-speech/karma.conf.js"
+          }
+        }
+      }
+    },
+    "audio-to-text": {
+      "projectType": "library",
+      "root": "projects/audio-to-text",
+      "sourceRoot": "projects/audio-to-text/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/audio-to-text/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/audio-to-text/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/audio-to-text/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/audio-to-text/src/test.ts",
+            "tsConfig": "projects/audio-to-text/tsconfig.spec.json",
+            "karmaConfig": "projects/audio-to-text/karma.conf.js"
+          }
+        }
+      }
+    },
+    "audio-library": {
+      "projectType": "library",
+      "root": "projects/audio-library",
+      "sourceRoot": "projects/audio-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/audio-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/audio-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/audio-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/audio-library/src/test.ts",
+            "tsConfig": "projects/audio-library/tsconfig.spec.json",
+            "karmaConfig": "projects/audio-library/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "cli": {
