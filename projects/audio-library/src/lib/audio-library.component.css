@@ -4,6 +4,7 @@
   align-items: center;
   max-width: 800px;
   margin: auto;
+  justify-content: center;
 }
 
 .main-body {
@@ -45,13 +46,37 @@
   border: 0;
 }
 
-.extreme-right{
+.extreme-right-save{
   float: right;
   margin:.6rem 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.extreme-right-save:hover {
+  text-decoration: underline;
 }
 
 article {
   padding-top: 1rem;
   width: 95vw;
   margin:auto;
+  /* color:#aa8108 */
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  background-color: rgba(53, 68, 92, 0.9);
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.extreme-right-save:hover .tooltip-text {
+  opacity: 1;
 }

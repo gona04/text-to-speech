@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DairyEntries } from '../models/DiaryEntries';
 import { DairyEntriesService } from '../dairy-entries.service';
+import { DairyEntries } from '../models/diaryEntries';
 
 @Component({
   selector: 'app-get-entries',
