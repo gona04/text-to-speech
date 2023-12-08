@@ -1,0 +1,13 @@
+main {
+    margin: 3rem;
+    padding: 1rem;
+    /* border: 1px solid lightgray; */
+    box-shadow: 6px 6px lightsteelblue;
+    background-color: rgba(176, 196, 222, 0.268);
+    border-radius: 25px;
+    /* color: rgb(230, 172, 36) */
+}
+
+/* body {
+  background-color: rgb(224, 232, 244);
+} */

@@ -1,6 +1,7 @@
 <div>
   <ul>
     <li [routerLink]="['home']">Home</li>
+    <li [routerLink]="['get-entries']"> Past Entries </li>
     <li *ngIf="isUserLoggedIn" (click)="login()" >Login</li>
     <li *ngIf="!isUserLoggedIn" (click)="logout()">Logout</li>
   </ul>

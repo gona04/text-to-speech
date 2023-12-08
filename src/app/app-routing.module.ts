@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { VoiceRecorderComponent } from './voice-recorder/voice-recorder.component';
 import { MsalGuard } from '@azure/msal-angular';
+import { GetEntriesComponent } from './get-entries/get-entries.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: VoiceRecorderComponent,
+    canActivate: [MsalGuard]
+  },
+  {
+    path: 'get-entries',
+    component: GetEntriesComponent,
     canActivate: [MsalGuard]
   }
 ];

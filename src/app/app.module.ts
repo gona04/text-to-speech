@@ -11,13 +11,15 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AudioLibraryModule } from 'projects/audio-library/src/public-api';
 import { VoiceRecorderComponent } from './voice-recorder/voice-recorder.component';
+import { GetEntriesComponent } from './get-entries/get-entries.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    VoiceRecorderComponent
+    VoiceRecorderComponent,
+    GetEntriesComponent
   ],
   imports: [
     BrowserModule,
