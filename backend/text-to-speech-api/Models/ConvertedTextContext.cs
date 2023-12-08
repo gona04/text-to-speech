@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using text_to_speech_api.Models;
 
-
 public class ConvertedTextContext : DbContext
 {
     public ConvertedTextContext(DbContextOptions<ConvertedTextContext> options)
@@ -9,5 +8,5 @@ public class ConvertedTextContext : DbContext
     {
     }
 
-    public DbSet<ConvertedTextItem> ConvertedTextItem { get; set; } = null!;
+    public DbSet<ConvertedTextItem> ConvertedTextItem { get; set; } = null; // Initialize without '!'
 }
