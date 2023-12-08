@@ -17,7 +17,8 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
           "StringLibrary": "1.0.0",
-          "Swashbuckle.AspNetCore": "6.5.0"
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "ValidationLibrary": "1.0.0"
         },
         "runtime": {
           "text-to-speech-api.dll": {}
@@ -2490,6 +2491,11 @@
         "runtime": {
           "StringLibrary.dll": {}
         }
+      },
+      "ValidationLibrary/1.0.0": {
+        "runtime": {
+          "ValidationLibrary.dll": {}
+        }
       }
     }
   },
@@ -3893,6 +3899,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "StringLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ValidationLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

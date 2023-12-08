@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\backend-libraries\StringLibrary\StringLibrary.csproj" />
+    <ProjectReference Include="..\..\backend-libraries\ValidationLibrary\ValidationLibrary.csproj" />
   </ItemGroup>
 
 </Project>

@@ -45,8 +45,8 @@ export class AudioLibraryComponent implements OnInit {
   uploadAudio(audioUploaded: any) {
 
     let files: FileList = audioUploaded.target.files;
-    let file : File = files[0];
-    this._audioLibraryService.submitVocalFile(file).subscribe((result:any) => {
+    let file: File = files[0];
+    this._audioLibraryService.submitVocalFile(file).subscribe((result: any) => {
       this.displayText = result.DisplayText;
     })
   }
@@ -55,15 +55,31 @@ export class AudioLibraryComponent implements OnInit {
     this.isLive = value;
   }
 
-  save() {
 
-    //this._emotionalAnalyserService.sendTextForAnalysis(this._voiceRecognitionService.text)
+  save() {
     let currentText = new Map().set(true, this._audioLibraryService.text).set(false, this.displayText);
     let text = currentText.get(this.isLive);
-    console.log(text + "is data for" + this.isLive);
-    this._audioLibraryService.postConvertedText(text).subscribe(result => {
-      console.dir(result);
-    });
-  }
 
+    if (!text || text.trim() === '') {
+      alert('Text cannot be empty. Please enter some text before saving.');
+      return;
+    }
+
+    this._audioLibraryService.postConvertedText(text).subscribe(
+      result => {
+        console.dir(result);
+        alert('Text saved successfully.');
+      },
+      error => {
+        console.error(error);
+
+        if (error.error && error.error.message) {
+          // Display the backend-specific error message
+          alert(`Error: ${error.error.message}`);
+        } else {
+          alert('Error saving text. Please try again later.');
+        }
+      }
+    );
+  }
 }

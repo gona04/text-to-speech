@@ -6,7 +6,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using text_to_speech_api.Models;
-using UtilityLibraries;
+using Validations;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace text_to_speech_api.Controllers
 {
@@ -21,7 +25,6 @@ namespace text_to_speech_api.Controllers
             _context = context;
         }
 
-        // GET: api/ConvertedText
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ConvertedTextItem>>> GetConvertedTextItem()
         {
@@ -29,15 +32,14 @@ namespace text_to_speech_api.Controllers
                 .OrderByDescending(item => item.CreatedAt)
                 .ToListAsync();
 
-            if (convertedTextItems == null)
+            if (convertedTextItems == null || !convertedTextItems.Any())
             {
-                return NotFound();
+                return NotFound(new { message = "No converted text items found." });
             }
 
             return Ok(convertedTextItems);
         }
 
-        // GET: api/ConvertedText/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ConvertedTextItem>> GetConvertedTextItem(long id)
         {
@@ -46,26 +48,40 @@ namespace text_to_speech_api.Controllers
 
             if (convertedTextItem == null)
             {
-                return NotFound();
+                return NotFound(new { message = $"Converted text item with ID {id} not found." });
             }
 
             return Ok(convertedTextItem);
         }
 
-        // PUT: api/ConvertedText/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteConvertedTextItem(long id)
+        {
+            var convertedTextItem = await _context.ConvertedTextItem
+                .FirstOrDefaultAsync(item => item.Id == id);
+
+            if (convertedTextItem == null)
+            {
+                return NotFound(new { message = $"Converted text item with ID {id} not found." });
+            }
+
+            _context.ConvertedTextItem.Remove(convertedTextItem);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutConvertedTextItem(long id, ConvertedTextItem convertedTextItem)
         {
             if (id != convertedTextItem.Id)
             {
-                return BadRequest("Invalid ID in the request body.");
+                return BadRequest(new { message = "Invalid ID in the request body." });
             }
 
-            // Additional server-side validation
-            if (string.IsNullOrEmpty(convertedTextItem.Text))
+            if (ValidationLibrary.IsTextEmpty(convertedTextItem.Text))
             {
-                return BadRequest("Text cannot be empty.");
+                return BadRequest(new { message = "Text cannot be empty." });
             }
 
             convertedTextItem.CreatedAt = DateTime.UtcNow;
@@ -80,7 +96,7 @@ namespace text_to_speech_api.Controllers
             {
                 if (!ConvertedTextItemExists(id))
                 {
-                    return NotFound();
+                    return NotFound(new { message = "Converted text item not found." });
                 }
                 else
                 {
@@ -91,18 +107,12 @@ namespace text_to_speech_api.Controllers
             return NoContent();
         }
 
-        // POST: api/ConvertedText
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<ConvertedTextItem>> PostConvertedTextItem(ConvertedTextItem convertedTextItem)
         {
-          String input = convertedTextItem.Text;
-           Console.WriteLine("Begins with uppercase? " +
-                 $"{(input.StartsWithUpper() ? "Yes" : "No")}");
-            // Additional server-side validation
-            if (string.IsNullOrEmpty(convertedTextItem.Text))
+            if (ValidationLibrary.IsTextEmpty(convertedTextItem.Text))
             {
-                return BadRequest("Text cannot be empty.");
+                return BadRequest(new { message = "Text cannot be empty." });
             }
 
             convertedTextItem.CreatedAt = DateTime.UtcNow;
@@ -111,24 +121,6 @@ namespace text_to_speech_api.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetConvertedTextItem), new { id = convertedTextItem.Id }, convertedTextItem);
-        }
-
-        // DELETE: api/ConvertedText/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteConvertedTextItem(long id)
-        {
-            var convertedTextItem = await _context.ConvertedTextItem
-                .FirstOrDefaultAsync(item => item.Id == id);
-
-            if (convertedTextItem == null)
-            {
-                return NotFound();
-            }
-
-            _context.ConvertedTextItem.Remove(convertedTextItem);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
         }
 
         private bool ConvertedTextItemExists(long id)

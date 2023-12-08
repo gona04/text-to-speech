@@ -3975,6 +3975,16 @@
         "runtime": {
           "bin/placeholder/StringLibrary.dll": {}
         }
+      },
+      "ValidationLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ValidationLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ValidationLibrary.dll": {}
+        }
       }
     }
   },
@@ -11290,6 +11300,11 @@
       "type": "project",
       "path": "../../backend-libraries/StringLibrary/StringLibrary.csproj",
       "msbuildProject": "../../backend-libraries/StringLibrary/StringLibrary.csproj"
+    },
+    "ValidationLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../backend-libraries/ValidationLibrary/ValidationLibrary.csproj",
+      "msbuildProject": "../../backend-libraries/ValidationLibrary/ValidationLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11303,7 +11318,8 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.0",
       "Pomelo.EntityFrameworkCore.MySql >= 7.0.0",
       "StringLibrary >= 1.0.0",
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "ValidationLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11335,6 +11351,9 @@
           "projectReferences": {
             "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj": {
               "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj"
+            },
+            "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj": {
+              "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj"
             }
           }
         }
