@@ -10,3 +10,14 @@
 /Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/refint/ValidationLibrary.dll
 /Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/ValidationLibrary.pdb
 /Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/ref/ValidationLibrary.dll
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/bin/Debug/net7.0/ValidationLibrary.deps.json
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/bin/Debug/net7.0/ValidationLibrary.dll
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/bin/Debug/net7.0/ValidationLibrary.pdb
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/ValidationLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/ValidationLibrary.AssemblyInfoInputs.cache
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/ValidationLibrary.AssemblyInfo.cs
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/ValidationLibrary.csproj.CoreCompileInputs.cache
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/ValidationLibrary.dll
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/refint/ValidationLibrary.dll
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/ValidationLibrary.pdb
+/workspaces/text-to-speech/backend-libraries/ValidationLibrary/obj/Debug/net7.0/ref/ValidationLibrary.dll

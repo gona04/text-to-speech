@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "text-to-speech-api/1.0.0": {
         "dependencies": {
+          "CustomAnnotations": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "7.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.2",
@@ -2487,6 +2488,11 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "CustomAnnotations/1.0.0": {
+        "runtime": {
+          "CustomAnnotations.dll": {}
+        }
+      },
       "StringLibrary/1.0.0": {
         "runtime": {
           "StringLibrary.dll": {}
@@ -3897,6 +3903,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "CustomAnnotations/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "StringLibrary/1.0.0": {
       "type": "project",

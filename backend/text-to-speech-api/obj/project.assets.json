@@ -3966,6 +3966,86 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "xunit/2.6.2": {
+        "type": "package",
+        "dependencies": {
+          "xunit.analyzers": "1.6.0",
+          "xunit.assert": "2.6.2",
+          "xunit.core": "[2.6.2]"
+        }
+      },
+      "xunit.abstractions/2.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {}
+        }
+      },
+      "xunit.analyzers/1.6.0": {
+        "type": "package"
+      },
+      "xunit.assert/2.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/xunit.assert.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/xunit.assert.dll": {}
+        }
+      },
+      "xunit.core/2.6.2": {
+        "type": "package",
+        "dependencies": {
+          "xunit.extensibility.core": "[2.6.2]",
+          "xunit.extensibility.execution": "[2.6.2]"
+        },
+        "build": {
+          "build/xunit.core.props": {},
+          "build/xunit.core.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/xunit.core.props": {},
+          "buildMultiTargeting/xunit.core.targets": {}
+        }
+      },
+      "xunit.extensibility.core/2.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "xunit.abstractions": "2.0.3"
+        },
+        "compile": {
+          "lib/netstandard1.1/xunit.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.core.dll": {}
+        }
+      },
+      "xunit.extensibility.execution/2.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "xunit.extensibility.core": "[2.6.2]"
+        },
+        "compile": {
+          "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
+        }
+      },
+      "CustomAnnotations/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/CustomAnnotations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CustomAnnotations.dll": {}
+        }
+      },
       "StringLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -11296,6 +11376,121 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "xunit/2.6.2": {
+      "sha512": "sErOyzTZBfgeLcdu5y3CkhCirZikCe9GwEv56jbQRjSa4FyI2tIHjfBRvlWqg7M78bfAGajrreH0IHnxrUOpVA==",
+      "type": "package",
+      "path": "xunit/2.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/README.md",
+        "_content/logo-128-transparent.png",
+        "xunit.2.6.2.nupkg.sha512",
+        "xunit.nuspec"
+      ]
+    },
+    "xunit.abstractions/2.0.3": {
+      "sha512": "pot1I4YOxlWjIb5jmwvvQNbTrZ3lJQ+jUGkGjWE3hEFM0l5gOnBWS+H3qsex68s5cO52g+44vpGzhAt+42vwKg==",
+      "type": "package",
+      "path": "xunit.abstractions/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/xunit.abstractions.dll",
+        "lib/netstandard1.0/xunit.abstractions.dll",
+        "lib/netstandard2.0/xunit.abstractions.dll",
+        "xunit.abstractions.2.0.3.nupkg.sha512",
+        "xunit.abstractions.nuspec"
+      ]
+    },
+    "xunit.analyzers/1.6.0": {
+      "sha512": "b/Wbrqr/bFvcjqAbYdJyCCvjz+PjjKMnoK/K6sbcCBu94pqAkB2vBAHFo87wNq2awsLPAuq5MA7q0XexyQ3mJQ==",
+      "type": "package",
+      "path": "xunit.analyzers/1.6.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/README.md",
+        "_content/logo-128-transparent.png",
+        "analyzers/dotnet/cs/xunit.analyzers.dll",
+        "analyzers/dotnet/cs/xunit.analyzers.fixes.dll",
+        "tools/install.ps1",
+        "tools/uninstall.ps1",
+        "xunit.analyzers.1.6.0.nupkg.sha512",
+        "xunit.analyzers.nuspec"
+      ]
+    },
+    "xunit.assert/2.6.2": {
+      "sha512": "JOj2+zWS08M59bCk3MkZFcKj2Izb2zwkHSPIKJLvnZYLR2Nw6HifjvBCpa8XhMF3mxDuGwZ0+ncmlhE9WoEaZw==",
+      "type": "package",
+      "path": "xunit.assert/2.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/README.md",
+        "_content/logo-128-transparent.png",
+        "lib/net6.0/xunit.assert.dll",
+        "lib/netstandard1.1/xunit.assert.dll",
+        "xunit.assert.2.6.2.nupkg.sha512",
+        "xunit.assert.nuspec"
+      ]
+    },
+    "xunit.core/2.6.2": {
+      "sha512": "LxJ06D9uTDyvHY52+Lym2TUlq3ObgAKSTuzM9gniau8qI1fd/CPag4PFaGs0RJfunUJtYHg9+XrS5EcW/5dxGA==",
+      "type": "package",
+      "path": "xunit.core/2.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/README.md",
+        "_content/logo-128-transparent.png",
+        "build/xunit.core.props",
+        "build/xunit.core.targets",
+        "buildMultiTargeting/xunit.core.props",
+        "buildMultiTargeting/xunit.core.targets",
+        "xunit.core.2.6.2.nupkg.sha512",
+        "xunit.core.nuspec"
+      ]
+    },
+    "xunit.extensibility.core/2.6.2": {
+      "sha512": "T8CmshbP1EeaDibLwgU/aEe53zrW0+x+mEz5aKxexS5vVyj1UwgDUjcTK/+prMF/9KgMHkgx1vIe7wv58wO6RQ==",
+      "type": "package",
+      "path": "xunit.extensibility.core/2.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/README.md",
+        "_content/logo-128-transparent.png",
+        "lib/net452/xunit.core.dll",
+        "lib/net452/xunit.core.dll.tdnet",
+        "lib/net452/xunit.runner.tdnet.dll",
+        "lib/net452/xunit.runner.utility.net452.dll",
+        "lib/netstandard1.1/xunit.core.dll",
+        "xunit.extensibility.core.2.6.2.nupkg.sha512",
+        "xunit.extensibility.core.nuspec"
+      ]
+    },
+    "xunit.extensibility.execution/2.6.2": {
+      "sha512": "kKo7XqyLF8blXGqQHlqKQ+AzST42kpB7oG81Km/kFEzWVfeDMgaEquOLAr/ZiR4tnkUbbWYrY6CJPTavFqGn6Q==",
+      "type": "package",
+      "path": "xunit.extensibility.execution/2.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/README.md",
+        "_content/logo-128-transparent.png",
+        "lib/net452/xunit.execution.desktop.dll",
+        "lib/netstandard1.1/xunit.execution.dotnet.dll",
+        "xunit.extensibility.execution.2.6.2.nupkg.sha512",
+        "xunit.extensibility.execution.nuspec"
+      ]
+    },
+    "CustomAnnotations/1.0.0": {
+      "type": "project",
+      "path": "../../backend-libraries/CustomAnnotations/CustomAnnotations.csproj",
+      "msbuildProject": "../../backend-libraries/CustomAnnotations/CustomAnnotations.csproj"
+    },
     "StringLibrary/1.0.0": {
       "type": "project",
       "path": "../../backend-libraries/StringLibrary/StringLibrary.csproj",
@@ -11309,6 +11504,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "CustomAnnotations >= 1.0.0",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 7.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.2",
@@ -11319,41 +11515,43 @@
       "Pomelo.EntityFrameworkCore.MySql >= 7.0.0",
       "StringLibrary >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
-      "ValidationLibrary >= 1.0.0"
+      "ValidationLibrary >= 1.0.0",
+      "xunit >= 2.6.2"
     ]
   },
   "packageFolders": {
-    "/Users/goonja/.nuget/packages/": {}
+    "/home/codespace/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/text-to-speech-api.csproj",
+      "projectUniqueName": "/workspaces/text-to-speech/backend/text-to-speech-api/text-to-speech-api.csproj",
       "projectName": "text-to-speech-api",
-      "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/text-to-speech-api.csproj",
-      "packagesPath": "/Users/goonja/.nuget/packages/",
-      "outputPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/obj/",
+      "projectPath": "/workspaces/text-to-speech/backend/text-to-speech-api/text-to-speech-api.csproj",
+      "packagesPath": "/home/codespace/.nuget/packages/",
+      "outputPath": "/workspaces/text-to-speech/backend/text-to-speech-api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/goonja/.nuget/NuGet/NuGet.Config"
+        "/home/codespace/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
-        "/usr/local/share/dotnet/sdk/7.0.310/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj": {
-              "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj"
+            "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj": {
+              "projectPath": "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj"
             },
-            "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj": {
-              "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj"
+            "/workspaces/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj": {
+              "projectPath": "/workspaces/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj"
+            },
+            "/workspaces/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj": {
+              "projectPath": "/workspaces/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj"
             }
           }
         }
@@ -11405,6 +11603,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.5.0, )"
+          },
+          "xunit": {
+            "target": "Package",
+            "version": "[2.6.2, )"
           }
         },
         "imports": [
@@ -11426,7 +11628,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/dotnet/7.0.404/sdk/7.0.404/RuntimeIdentifierGraph.json"
       }
     }
   }

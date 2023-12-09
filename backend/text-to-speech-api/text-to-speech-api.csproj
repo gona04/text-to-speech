@@ -28,12 +28,14 @@
 
     <!-- Use the latest version available for Swashbuckle.AspNetCore (6.5.0 as of now) -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="xunit" Version="2.6.2" />
 
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\backend-libraries\StringLibrary\StringLibrary.csproj" />
     <ProjectReference Include="..\..\backend-libraries\ValidationLibrary\ValidationLibrary.csproj" />
+    <ProjectReference Include="..\..\backend-libraries\CustomAnnotations\CustomAnnotations.csproj" />
   </ItemGroup>
 
 </Project>
