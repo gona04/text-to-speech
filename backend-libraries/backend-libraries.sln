@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringLibrary", "StringLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationLibrary", "ValidationLibrary\ValidationLibrary.csproj", "{FA287AFD-0E01-4D31-8123-6252B7AFA02B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAnnotations", "CustomAnnotations\CustomAnnotations.csproj", "{1616435F-B181-4260-82EC-ABD1F604B826}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{FA287AFD-0E01-4D31-8123-6252B7AFA02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA287AFD-0E01-4D31-8123-6252B7AFA02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA287AFD-0E01-4D31-8123-6252B7AFA02B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1616435F-B181-4260-82EC-ABD1F604B826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1616435F-B181-4260-82EC-ABD1F604B826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1616435F-B181-4260-82EC-ABD1F604B826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1616435F-B181-4260-82EC-ABD1F604B826}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

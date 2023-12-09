@@ -33,8 +33,7 @@ namespace texttospeechapi.Migrations
                         .HasColumnType("varchar(5000)");
 
                     b.Property<string>("UserName")
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 

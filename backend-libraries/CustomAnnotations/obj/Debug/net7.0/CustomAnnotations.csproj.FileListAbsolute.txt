@@ -1,0 +1,11 @@
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.AssemblyInfoInputs.cache
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.AssemblyInfo.cs
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.csproj.CoreCompileInputs.cache
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/bin/Debug/net7.0/CustomAnnotations.deps.json
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/bin/Debug/net7.0/CustomAnnotations.dll
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/bin/Debug/net7.0/CustomAnnotations.pdb
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.dll
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/refint/CustomAnnotations.dll
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.pdb
+/workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/ref/CustomAnnotations.dll
