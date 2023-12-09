@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj": {}
+    "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj": {}
   },
   "projects": {
-    "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj": {
+    "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj",
+        "projectUniqueName": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj",
         "projectName": "CustomAnnotations",
-        "projectPath": "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj",
-        "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/",
+        "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj",
+        "packagesPath": "/Users/goonja/.nuget/packages/",
+        "outputPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
+          "/Users/goonja/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/dotnet/7.0.404/sdk/7.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
         }
       }
     }

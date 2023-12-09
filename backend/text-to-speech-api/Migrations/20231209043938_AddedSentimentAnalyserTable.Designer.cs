@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace texttospeechapi.Migrations
 {
     [DbContext(typeof(ConvertedTextContext))]
-    partial class ConvertedTextContextModelSnapshot : ModelSnapshot
+    [Migration("20231209043938_AddedSentimentAnalyserTable")]
+    partial class AddedSentimentAnalyserTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,7 +67,27 @@ namespace texttospeechapi.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ConvertedTextId")
+                        .IsUnique();
+
                     b.ToTable("SentimentAnalyserItems");
+                });
+
+            modelBuilder.Entity("text_to_speech_api.Models.SentimentAnalyserItem", b =>
+                {
+                    b.HasOne("text_to_speech_api.Models.ConvertedTextItem", "ConvertedTextItem")
+                        .WithOne("SentimentAnalyserItem")
+                        .HasForeignKey("text_to_speech_api.Models.SentimentAnalyserItem", "ConvertedTextId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ConvertedTextItem");
+                });
+
+            modelBuilder.Entity("text_to_speech_api.Models.ConvertedTextItem", b =>
+                {
+                    b.Navigation("SentimentAnalyserItem")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

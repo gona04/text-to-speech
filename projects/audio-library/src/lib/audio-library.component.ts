@@ -66,15 +66,15 @@ export class AudioLibraryComponent implements OnInit {
     }
 
     this._audioLibraryService.postConvertedText(text).subscribe(
-      result => {
+      (result:any) => {
         console.dir(result);
         alert('Text saved successfully.');
+        this._audioLibraryService.sendTextForAnalysis(text, result.id);
       },
       error => {
         console.error(error);
 
         if (error.error && error.error.message) {
-          // Display the backend-specific error message
           alert(`Error: ${error.error.message}`);
         } else {
           alert('Error saving text. Please try again later.');
@@ -82,4 +82,5 @@ export class AudioLibraryComponent implements OnInit {
       }
     );
   }
+
 }

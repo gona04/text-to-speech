@@ -12359,38 +12359,40 @@
     ]
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "/Users/goonja/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/text-to-speech/backend/text-to-speech-api/text-to-speech-api.csproj",
+      "projectUniqueName": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/text-to-speech-api.csproj",
       "projectName": "text-to-speech-api",
-      "projectPath": "/workspaces/text-to-speech/backend/text-to-speech-api/text-to-speech-api.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/text-to-speech/backend/text-to-speech-api/obj/",
+      "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/text-to-speech-api.csproj",
+      "packagesPath": "/Users/goonja/.nuget/packages/",
+      "outputPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend/text-to-speech-api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "/Users/goonja/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
+        "/usr/local/share/dotnet/sdk/7.0.310/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj": {
-              "projectPath": "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj"
+            "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj": {
+              "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj"
             },
-            "/workspaces/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj": {
-              "projectPath": "/workspaces/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj"
+            "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj": {
+              "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj"
             },
-            "/workspaces/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj": {
-              "projectPath": "/workspaces/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj"
+            "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj": {
+              "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/ValidationLibrary/ValidationLibrary.csproj"
             }
           }
         }
@@ -12471,7 +12473,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/opt/dotnet/7.0.404/sdk/7.0.404/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
       }
     }
   }

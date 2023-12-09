@@ -8,5 +8,6 @@ public class ConvertedTextContext : DbContext
     {
     }
 
-    public DbSet<ConvertedTextItem> ConvertedTextItem { get; set; } = null; // Initialize without '!'
+    public DbSet<ConvertedTextItem> ConvertedTextItem { get; set; } = null!;
+    public DbSet<SentimentAnalyserItem> SentimentAnalyserItems { get; set; } = null!;
 }

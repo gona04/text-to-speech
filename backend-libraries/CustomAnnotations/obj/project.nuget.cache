@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KjJVIBp5ansEFM6tNJFEsL1x70/E3TDq/CmtxnTcWLuvuEltjCklWsr+ski8Wi4iiKm1JWn3ZXT531ghZwxd6w==",
+  "dgSpecHash": "AdjtsrSOGr2A4HWCFl+TQUyi2FkYQAFm3gRk9QYdgimHxxZxVFj5uD6OgNMZe8QodZJGtaAEZXR8L6hr7MPXqQ==",
   "success": true,
-  "projectFilePath": "/workspaces/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj",
+  "projectFilePath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

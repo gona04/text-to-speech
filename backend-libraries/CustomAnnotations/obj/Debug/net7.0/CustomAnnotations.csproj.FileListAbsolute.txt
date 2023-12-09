@@ -9,3 +9,15 @@
 /workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/refint/CustomAnnotations.dll
 /workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.pdb
 /workspaces/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/ref/CustomAnnotations.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/bin/Debug/net7.0/CustomAnnotations.deps.json
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/bin/Debug/net7.0/CustomAnnotations.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/bin/Debug/net7.0/CustomAnnotations.pdb
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.csproj.AssemblyReference.cache
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.GeneratedMSBuildEditorConfig.editorconfig
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.AssemblyInfoInputs.cache
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.AssemblyInfo.cs
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.csproj.CoreCompileInputs.cache
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/refint/CustomAnnotations.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/CustomAnnotations.pdb
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/obj/Debug/net7.0/ref/CustomAnnotations.dll

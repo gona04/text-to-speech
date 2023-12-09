@@ -24,6 +24,13 @@ export class AudioLibraryService {
   public text = "";
   tempWords: any;
 
+  //Sentiment Analyzer API
+  private urlSentimentAnalyzerAPI = "https://emotion-analysis-api.cognitiveservices.azure.com/text/analytics/v3.1/sentiment?emotion-analysis-api=true"
+  private headersentimentAnalyzerAPI = new HttpHeaders()
+    .set('Content-Type', 'application/json')
+    .set('Ocp-Apim-Subscription-Key', '172a80032d1c47599854ca321e141d13')
+    .set('Ocp-Apim-Subscription-Region', 'centralus');
+
   constructor(private http: HttpClient) {
     //FOR live text to speech
     this.init();
@@ -90,5 +97,31 @@ export class AudioLibraryService {
     console.log("dotnet call made");
     console.dir(body);
     return this.http.post(this.dotnetURL, body);
+  }
+
+  //FOR SENTIMENTAL API
+  sendTextForAnalysis(text: string, textId: any) {
+    const document = [{ id: '1', text: text, language: 'en' }];
+    this.http.post(this.urlSentimentAnalyzerAPI, {documents: document}, { headers: this.headersentimentAnalyzerAPI, responseType: 'json' }).subscribe((result:any) => {
+      console.log(result);
+
+      var sentimentObj = {
+        "positive": result.documents[0].confidenceScores.positive * 100,
+        "negative": result.documents[0].confidenceScores.negative * 100,
+        "neutral": result.documents[0].confidenceScores.neutral * 100,
+        "sentiment": result.documents[0].sentiment,
+        "convertedTextId": textId,
+      }
+
+      this.postSentimentalAnalyserDb(sentimentObj);
+    });
+  }
+
+  postSentimentalAnalyserDb(sentimentObj: any) {
+    console.log(sentimentObj);
+
+    this.http.post("http://localhost:5103/api/SentimentAnalyser", sentimentObj).subscribe(result => {
+      console.log(result);
+    })
   }
 }
