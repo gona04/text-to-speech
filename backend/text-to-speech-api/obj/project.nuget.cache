@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AAogvOT+P8Sq85UjRpVdgPdjr4OBygWLYky7vHw8UvB0Cw9ZvHFen4vgu6SxWfK64255/NDB42o4EQ5nLkcdSg==",
+  "dgSpecHash": "TuJjzm69kOEbZFJiatQHGdQSSRabHUwYxRrjq0j9QDh5TMtqEiYtqNX9XchJ7AlE+3JNhoGt2SLLkZ0AQ5E0gw==",
   "success": true,
   "projectFilePath": "/workspaces/text-to-speech/backend/text-to-speech-api/text-to-speech-api.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "/home/codespace/.nuget/packages/microsoft.codeanalysis.visualbasic.workspaces/4.0.0/microsoft.codeanalysis.visualbasic.workspaces.4.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.codeanalysis.workspaces.common/4.0.0/microsoft.codeanalysis.workspaces.common.4.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.codeanalysis.workspaces.msbuild/4.0.0/microsoft.codeanalysis.workspaces.msbuild.4.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.codecoverage/17.0.0/microsoft.codecoverage.17.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.data.sqlclient/5.0.1/microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.0.1/microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
@@ -69,10 +70,13 @@
     "/home/codespace/.nuget/packages/microsoft.identitymodel.tokens/6.21.0/microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.net.stringtools/17.3.2/microsoft.net.stringtools.17.3.2.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.net.test.sdk/17.0.0/microsoft.net.test.sdk.17.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.netcore.platforms/1.1.1/microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.netcore.targets/1.1.3/microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.sqlserver.server/1.0.0/microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.testplatform.objectmodel/17.0.0/microsoft.testplatform.objectmodel.17.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.testplatform.testhost/17.0.0/microsoft.testplatform.testhost.17.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.visualstudio.debugger.contracts/17.2.0/microsoft.visualstudio.debugger.contracts.17.2.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.visualstudio.web.codegeneration/7.0.0/microsoft.visualstudio.web.codegeneration.7.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.visualstudio.web.codegeneration.core/7.0.0/microsoft.visualstudio.web.codegeneration.core.7.0.0.nupkg.sha512",
@@ -203,13 +207,13 @@
     "/home/codespace/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/xunit/2.6.2/xunit.2.6.2.nupkg.sha512",
+    "/home/codespace/.nuget/packages/xunit/2.4.1/xunit.2.4.1.nupkg.sha512",
     "/home/codespace/.nuget/packages/xunit.abstractions/2.0.3/xunit.abstractions.2.0.3.nupkg.sha512",
-    "/home/codespace/.nuget/packages/xunit.analyzers/1.6.0/xunit.analyzers.1.6.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/xunit.assert/2.6.2/xunit.assert.2.6.2.nupkg.sha512",
-    "/home/codespace/.nuget/packages/xunit.core/2.6.2/xunit.core.2.6.2.nupkg.sha512",
-    "/home/codespace/.nuget/packages/xunit.extensibility.core/2.6.2/xunit.extensibility.core.2.6.2.nupkg.sha512",
-    "/home/codespace/.nuget/packages/xunit.extensibility.execution/2.6.2/xunit.extensibility.execution.2.6.2.nupkg.sha512"
+    "/home/codespace/.nuget/packages/xunit.analyzers/0.10.0/xunit.analyzers.0.10.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/xunit.assert/2.4.1/xunit.assert.2.4.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/xunit.core/2.4.1/xunit.core.2.4.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/xunit.extensibility.core/2.4.1/xunit.extensibility.core.2.4.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/xunit.extensibility.execution/2.4.1/xunit.extensibility.execution.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

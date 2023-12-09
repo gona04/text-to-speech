@@ -20,6 +20,7 @@
     <!-- Use a version of Microsoft.AspNetCore.Mvc.NewtonsoftJson compatible with .NET 7.0 -->
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.0" />
 
     <!-- Use the latest version for Pomelo.EntityFrameworkCore.MySql and its design package -->
@@ -28,7 +29,7 @@
 
     <!-- Use the latest version available for Swashbuckle.AspNetCore (6.5.0 as of now) -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="xunit" Version="2.6.2" />
+    <PackageReference Include="xunit" Version="2.4.1" />
 
   </ItemGroup>
 

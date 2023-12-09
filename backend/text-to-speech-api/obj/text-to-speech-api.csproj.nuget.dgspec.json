@@ -233,6 +233,10 @@
               "target": "Package",
               "version": "[7.0.2, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.0.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -247,7 +251,7 @@
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.6.2, )"
+              "version": "[2.4.1, )"
             }
           },
           "imports": [
