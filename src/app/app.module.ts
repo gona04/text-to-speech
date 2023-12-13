@@ -14,6 +14,7 @@ import { VoiceRecorderComponent } from './voice-recorder/voice-recorder.componen
 import { GetEntriesComponent } from './get-entries/get-entries.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -3,5 +3,9 @@ export interface DairyEntries {
   text: string,
   userName: string,
   createdAt: string,
-  createdAtTime: string
+  createdAtTime: string,
+  negative: number,
+  neutral: number,
+  positive: number,
+  sentiment: string
 }

@@ -120,7 +120,7 @@ export class AudioLibraryService {
   postSentimentalAnalyserDb(sentimentObj: any) {
     console.log(sentimentObj);
 
-    this.http.post("http://localhost:5103/api/SentimentAnalyser", sentimentObj).subscribe(result => {
+   this.http.post("http://localhost:5103/api/SentimentAnalyser", sentimentObj).subscribe(result => {
       console.log(result);
     })
   }

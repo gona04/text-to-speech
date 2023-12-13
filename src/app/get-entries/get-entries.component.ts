@@ -8,7 +8,7 @@ import { DairyEntries } from '../models/diaryEntries';
   styleUrls: ['./get-entries.component.css']
 })
 export class GetEntriesComponent implements OnInit {
-diaryEntries: DairyEntries[] = [];
+  diaryEntries: DairyEntries[] = [];
   constructor(private _diaryEntriesServices: DairyEntriesService) { }
 
   ngOnInit(): void {
@@ -42,6 +42,24 @@ diaryEntries: DairyEntries[] = [];
       })
   }
 
+  getTheAnalysis() {
+    this._diaryEntriesServices.getCompleteAnalysis().subscribe(
+      response => {
+        // Handle success
+        console.log(response);
+      },
+      error => {
+        // Handle error
+        console.error(error);
+
+        // Check if the error has details
+        if (error.error && error.error.errors) {
+          // Log validation errors
+          console.error("Validation Errors:", error.error.errors);
+        }
+      }
+    );
+  }
 
 
 }

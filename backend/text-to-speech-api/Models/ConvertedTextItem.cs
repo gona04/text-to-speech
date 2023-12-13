@@ -19,4 +19,9 @@ namespace text_to_speech_api.Models
         [DataType(DataType.DateTime)]
         public DateTime CreatedAt { get; set; }
     }
+
+  public class UserDetailsModel
+  {
+    public string UserName { get; set; }
+  }
 }
