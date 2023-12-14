@@ -9,6 +9,7 @@ import { DairyEntries } from '../models/diaryEntries';
 })
 export class GetEntriesComponent implements OnInit {
   diaryEntries: DairyEntries[] = [];
+  showModal = false;
   constructor(private _diaryEntriesServices: DairyEntriesService) { }
 
   ngOnInit(): void {
@@ -45,6 +46,7 @@ export class GetEntriesComponent implements OnInit {
   getTheAnalysis() {
     this._diaryEntriesServices.getCompleteAnalysis().subscribe(
       response => {
+        this._diaryEntriesServices.setAnalysisModalView(true, response)
         // Handle success
         console.log(response);
       },

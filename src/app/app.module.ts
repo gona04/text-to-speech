@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { AudioLibraryModule } from 'projects/audio-library/src/public-api';
 import { VoiceRecorderComponent } from './voice-recorder/voice-recorder.component';
 import { GetEntriesComponent } from './get-entries/get-entries.component';
+import { ModalCompleteAnalysisComponent } from './modal-complete-analysis/modal-complete-analysis.component';
 
 
 
@@ -20,7 +21,8 @@ import { GetEntriesComponent } from './get-entries/get-entries.component';
     AppComponent,
     HeaderComponent,
     VoiceRecorderComponent,
-    GetEntriesComponent
+    GetEntriesComponent,
+    ModalCompleteAnalysisComponent
   ],
   imports: [
     BrowserModule,
