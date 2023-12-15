@@ -10,6 +10,7 @@ import { AzureAdDemoService } from './azure-ad-demo.service';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AudioLibraryModule } from 'projects/audio-library/src/public-api';
+import { PrintModule } from 'projects/print/src/public-api';
 import { VoiceRecorderComponent } from './voice-recorder/voice-recorder.component';
 import { GetEntriesComponent } from './get-entries/get-entries.component';
 import { ModalCompleteAnalysisComponent } from './modal-complete-analysis/modal-complete-analysis.component';
@@ -31,6 +32,7 @@ import { ModalCompleteAnalysisComponent } from './modal-complete-analysis/modal-
     AppRoutingModule,
     HttpClientModule,
     AudioLibraryModule,
+    PrintModule,
     MsalModule.forRoot(new PublicClientApplication
       (
         {

@@ -12,7 +12,11 @@
     "sourceMap": true,
     "paths": {
       "audio-library": [
-        "dist/audio-library"
+        "dist/audio-library",
+        "dist/print"
+      ],
+      "print": [
+        "dist/print"
       ]
     },
     "declaration": false,

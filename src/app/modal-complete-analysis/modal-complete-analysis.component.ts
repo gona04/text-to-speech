@@ -22,6 +22,11 @@ export class ModalCompleteAnalysisComponent implements OnInit {
       console.log(data)
     })
   }
+
+  printPage() {
+    print();
+  }
+
   close(){
     this._diaryEntryServices.setAnalysisModalView(false);
   }
