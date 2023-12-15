@@ -24,7 +24,7 @@ export class ModalCompleteAnalysisComponent implements OnInit {
   }
 
   printPage() {
-    window.print();
+    print();
   }
 
   close(){

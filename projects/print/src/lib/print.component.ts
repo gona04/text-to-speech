@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       print works!
     </p>
   `,
-  styles: [
+  styleUrls: [
     './print.component.css'
   ]
 })
