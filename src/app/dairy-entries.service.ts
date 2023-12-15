@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { DairyEntries } from './models/diaryEntries';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +20,7 @@ export class DairyEntriesService {
 
   getCompleteAnalysis(): Observable<any> {
     const userDetails = { "userName": "goonja" };
-    return this.http.post<any>( this.entriesURL +'user-details', userDetails);
+    return this.http.post<any>( this.entriesURL +'/user-details', userDetails);
   }
 
   setAnalysisModalView(shouldShow: boolean,  diaryEntries?: Object) {

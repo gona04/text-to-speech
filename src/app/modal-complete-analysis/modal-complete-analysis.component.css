@@ -65,3 +65,22 @@ button.print:hover {
   color: #95730d
 }
 
+@media print {
+  button {
+    visibility: hidden;
+  }
+  .footer,.close {
+    visibility: hidden;
+  }
+  .card {
+    height: 100vh;
+    width: 100vw;
+  }
+  .header {
+    font-size: 2rem;
+  }
+  .body{
+    font-size: 1.5rem;
+  }
+}
+

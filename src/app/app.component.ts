@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AzureAdDemoService } from './azure-ad-demo.service';
 import { DairyEntriesService } from './dairy-entries.service';
+import { AudioLibraryService } from 'projects/audio-library/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent implements OnInit {
   showModal: any = false;
   isUserLoggedIn: boolean = false;
 
-  constructor(private _azureADDemoService: AzureAdDemoService, private _overallAnalysis: DairyEntriesService) {
+  constructor(private _azureADDemoService: AzureAdDemoService, private _overallAnalysis: DairyEntriesService, private audioLibraryServices: AudioLibraryService) {
   }
   ngOnInit(): void {
     this._azureADDemoService.isUserLoggedIn.subscribe(x => {
@@ -25,5 +26,6 @@ export class AppComponent implements OnInit {
      this.showModal = result;
     })
   }
+
 
 }

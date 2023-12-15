@@ -3,41 +3,43 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 declare var webkitSpeechRecognition: any;
+
 @Injectable({
   providedIn: 'root'
 })
 export class AudioLibraryService {
-  //Dotnet configuration
-  dotnetURL = " http://localhost:5103/api/ConvertedText";
+  // Dotnet configuration
+  private dotnetURL = "http://localhost:5103/api/ConvertedText";
 
-  //FOR AZURE SPEECH TO TEXT AUDIO FILE UPLOAD
-  auth_token = "eyJhbGciOiJFUzI1NiIsImtpZCI6ImtleTEiLCJ0eXAiOiJKV1QifQ.eyJyZWdpb24iOiJjYW5hZGFjZW50cmFsIiwic3Vic2NyaXB0aW9uLWlkIjoiNzgwY2FmNmYzZDM2NDM0NjhlMTMxMjJmODkxNjU3YzciLCJwcm9kdWN0LWlkIjoiU3BlZWNoU2VydmljZXMuRjAiLCJjb2duaXRpdmUtc2VydmljZXMtZW5kcG9pbnQiOiJodHRwczovL2FwaS5jb2duaXRpdmUubWljcm9zb2Z0LmNvbS9pbnRlcm5hbC92MS4wLyIsImF6dXJlLXJlc291cmNlLWlkIjoiL3N1YnNjcmlwdGlvbnMvOGNiMzNkZGQtYzI2Ny00NzNkLWJhZTItNmZkNWI5ZDRjMTM0L3Jlc291cmNlR3JvdXBzL0RlZmF1bHRSZXNvdXJjZUdyb3VwLWNhbmFkYWVhc3QvcHJvdmlkZXJzL01pY3Jvc29mdC5Db2duaXRpdmVTZXJ2aWNlcy9hY2NvdW50cy90YWxrdG93cml0ZSIsInNjb3BlIjoic3BlZWNoc2VydmljZXMiLCJhdWQiOiJ1cm46bXMuc3BlZWNoc2VydmljZXMuY2FuYWRhY2VudHJhbCIsImV4cCI6MTcwMTgwNzE1MSwiaXNzIjoidXJuOm1zLmNvZ25pdGl2ZXNlcnZpY2VzIn0.tV9NHN-NsfX3_62J8QCqBAT4eMKMu-ixOk5G9NdhLUKyr0DZVF2g0WHEyrmvr796sm7wrVxY40-BCpmhxMtRoQ";
-  url = "https://canadacentral.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1"
-  headers = new HttpHeaders()
-  .set('Content-Type', 'audio/wav')
-  .set('Ocp-Apim-Subscription-Key', '35db1fb4c14f4b4faec697d45be77a75')
-  .set('Authorization', `Bearer ${this.auth_token}`)
+  // FOR AZURE SPEECH TO TEXT AUDIO FILE UPLOAD
+  private auth_token = "your_bearer_token"; // Replace with your actual token
+  private url = "https://canadacentral.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1";
+  private headers = new HttpHeaders()
+    .set('Content-Type', 'audio/wav')
+    .set('Ocp-Apim-Subscription-Key', '35db1fb4c14f4b4faec697d45be77a75')
+    .set('Authorization', `Bearer ${this.auth_token}`);
 
-  //FOR WEB SPEECH API LIVE SPEECH TO TEXT
-  recognition = new webkitSpeechRecognition();
-  isStoppedSpeechRecord = true;
+  // FOR WEB SPEECH API LIVE SPEECH TO TEXT
+  private recognition = new webkitSpeechRecognition();
+  private isStoppedSpeechRecord = true;
   public text = "";
-  tempWords: any;
+  private tempWords: any;
 
-  //Sentiment Analyzer API
-  private urlSentimentAnalyzerAPI = "https://emotion-analysis-api.cognitiveservices.azure.com/text/analytics/v3.1/sentiment?emotion-analysis-api=true"
+  // Sentiment Analyzer API
+  private urlSentimentAnalyzerAPI = "https://emotion-analysis-api.cognitiveservices.azure.com/text/analytics/v3.1/sentiment?emotion-analysis-api=true";
   private headersentimentAnalyzerAPI = new HttpHeaders()
     .set('Content-Type', 'application/json')
     .set('Ocp-Apim-Subscription-Key', '172a80032d1c47599854ca321e141d13')
     .set('Ocp-Apim-Subscription-Region', 'centralus');
 
   constructor(private http: HttpClient) {
-    //FOR live text to speech
+    // FOR live text to speech
     this.init();
-   }
-//POST call for the AZURE API
+  }
+
+  // POST call for the AZURE API
   submitVocalFile(audioFile: any): Observable<any> {
-    return this.http.post(this.url + '?language=en-CA', audioFile, {
+    return this.http.post(`${this.url}?language=en-CA`, audioFile, {
       headers: this.headers,
       responseType: 'json'
     });
@@ -60,58 +62,58 @@ export class AudioLibraryService {
     });
   }
 
-  //To start reciving audio from the user
+  // To start receiving audio from the user
   start() {
     this.isStoppedSpeechRecord = false;
     this.recognition.interimResults = false;
     this.recognition.continuous = true;
     this.recognition.start();
     this.recognition.addEventListener("end", (condition: any) => {
-      if(this.isStoppedSpeechRecord) {
+      if (this.isStoppedSpeechRecord) {
         this.recognition.stop();
       } else {
         this.wordConcat();
         this.recognition.start();
       }
-    })
+    });
   }
 
-  //This contains the text that the user will get after conversion
+  // This contains the text that the user will get after conversion
   wordConcat() {
-  this.text = this.tempWords + ". ";
+    this.text = this.tempWords + ". ";
   }
 
-  //This will be called when the user wants to stop the conversion of speech to text
+  // This will be called when the user wants to stop the conversion of speech to text
   stop() {
     this.isStoppedSpeechRecord = true;
     this.recognition.stop();
   }
 
-  //Aded dotnet backend
-  postConvertedText(text: string) {
+  // Added dotnet backend
+  postConvertedText(text: string): Observable<any> {
     const body = {
       "text": text,
       "userName": "Goonja",
       "createdAt": new Date().toISOString()
-    }
+    };
     console.log("dotnet call made");
     console.dir(body);
     return this.http.post(this.dotnetURL, body);
   }
 
-  //FOR SENTIMENTAL API
+  // FOR SENTIMENTAL API
   sendTextForAnalysis(text: string, textId: any) {
     const document = [{ id: '1', text: text, language: 'en' }];
-    this.http.post(this.urlSentimentAnalyzerAPI, {documents: document}, { headers: this.headersentimentAnalyzerAPI, responseType: 'json' }).subscribe((result:any) => {
+    this.http.post(this.urlSentimentAnalyzerAPI, { documents: document }, { headers: this.headersentimentAnalyzerAPI, responseType: 'json' }).subscribe((result: any) => {
       console.log(result);
 
-      var sentimentObj = {
+      const sentimentObj = {
         "positive": result.documents[0].confidenceScores.positive * 100,
         "negative": result.documents[0].confidenceScores.negative * 100,
         "neutral": result.documents[0].confidenceScores.neutral * 100,
         "sentiment": result.documents[0].sentiment,
         "convertedTextId": textId,
-      }
+      };
 
       this.postSentimentalAnalyserDb(sentimentObj);
     });
@@ -120,8 +122,12 @@ export class AudioLibraryService {
   postSentimentalAnalyserDb(sentimentObj: any) {
     console.log(sentimentObj);
 
-   this.http.post("http://localhost:5103/api/SentimentAnalyser", sentimentObj).subscribe(result => {
+    this.http.post("http://localhost:5103/api/SentimentAnalyser", sentimentObj).subscribe(result => {
       console.log(result);
-    })
+    });
   }
-}
+
+  sendDataTobeEdited(data: any) {
+    console.log(data);
+  }
+ }

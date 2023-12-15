@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DairyEntriesService } from '../dairy-entries.service';
 import { DairyEntries } from '../models/diaryEntries';
+import { AudioLibraryService } from 'projects/audio-library/src/public-api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-entries',
@@ -10,7 +12,7 @@ import { DairyEntries } from '../models/diaryEntries';
 export class GetEntriesComponent implements OnInit {
   diaryEntries: DairyEntries[] = [];
   showModal = false;
-  constructor(private _diaryEntriesServices: DairyEntriesService) { }
+  constructor(private _diaryEntriesServices: DairyEntriesService,private _audioLibrary: AudioLibraryService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAllEntries()
@@ -63,5 +65,8 @@ export class GetEntriesComponent implements OnInit {
     );
   }
 
-
+  getDataThatNeedsTobeEdited(d: any) {
+    this._audioLibrary.sendDataTobeEdited(d);
+    this.router.navigate(['home'])
+  }
 }
