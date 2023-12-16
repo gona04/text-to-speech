@@ -1,0 +1,12 @@
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/bin/Debug/net7.0/CustomAnnotationsSentimentAnalysis.deps.json
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/bin/Debug/net7.0/CustomAnnotationsSentimentAnalysis.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/bin/Debug/net7.0/CustomAnnotationsSentimentAnalysis.pdb
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/obj/Debug/net7.0/CustomAnnotationsSentimentAnalysis.csproj.AssemblyReference.cache
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/obj/Debug/net7.0/CustomAnnotationsSentimentAnalysis.GeneratedMSBuildEditorConfig.editorconfig
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/obj/Debug/net7.0/CustomAnnotationsSentimentAnalysis.AssemblyInfoInputs.cache
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/obj/Debug/net7.0/CustomAnnotationsSentimentAnalysis.AssemblyInfo.cs
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/obj/Debug/net7.0/CustomAnnotationsSentimentAnalysis.csproj.CoreCompileInputs.cache
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/obj/Debug/net7.0/CustomAnnotationsSentimentAnalysis.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/obj/Debug/net7.0/refint/CustomAnnotationsSentimentAnalysis.dll
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/obj/Debug/net7.0/CustomAnnotationsSentimentAnalysis.pdb
+/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/obj/Debug/net7.0/ref/CustomAnnotationsSentimentAnalysis.dll

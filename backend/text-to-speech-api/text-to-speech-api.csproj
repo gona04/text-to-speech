@@ -37,6 +37,7 @@
     <ProjectReference Include="..\..\backend-libraries\StringLibrary\StringLibrary.csproj" />
     <ProjectReference Include="..\..\backend-libraries\ValidationLibrary\ValidationLibrary.csproj" />
     <ProjectReference Include="..\..\backend-libraries\CustomAnnotations\CustomAnnotations.csproj" />
+    <ProjectReference Include="..\..\backend-libraries\CustomAnnotationsSentimentAnalysis\CustomAnnotationsSentimentAnalysis.csproj" />
   </ItemGroup>
 
 </Project>

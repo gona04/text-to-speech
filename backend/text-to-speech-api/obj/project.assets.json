@@ -4332,6 +4332,16 @@
           "bin/placeholder/CustomAnnotations.dll": {}
         }
       },
+      "CustomAnnotationsSentimentAnalysis/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/CustomAnnotationsSentimentAnalysis.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CustomAnnotationsSentimentAnalysis.dll": {}
+        }
+      },
       "StringLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -12329,6 +12339,11 @@
       "path": "../../backend-libraries/CustomAnnotations/CustomAnnotations.csproj",
       "msbuildProject": "../../backend-libraries/CustomAnnotations/CustomAnnotations.csproj"
     },
+    "CustomAnnotationsSentimentAnalysis/1.0.0": {
+      "type": "project",
+      "path": "../../backend-libraries/CustomAnnotationsSentimentAnalysis/CustomAnnotationsSentimentAnalysis.csproj",
+      "msbuildProject": "../../backend-libraries/CustomAnnotationsSentimentAnalysis/CustomAnnotationsSentimentAnalysis.csproj"
+    },
     "StringLibrary/1.0.0": {
       "type": "project",
       "path": "../../backend-libraries/StringLibrary/StringLibrary.csproj",
@@ -12343,6 +12358,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "CustomAnnotations >= 1.0.0",
+      "CustomAnnotationsSentimentAnalysis >= 1.0.0",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 7.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.2",
@@ -12387,6 +12403,9 @@
           "projectReferences": {
             "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj": {
               "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotations/CustomAnnotations.csproj"
+            },
+            "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/CustomAnnotationsSentimentAnalysis.csproj": {
+              "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/CustomAnnotationsSentimentAnalysis/CustomAnnotationsSentimentAnalysis.csproj"
             },
             "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj": {
               "projectPath": "/Users/goonja/Codding_Space/UI_WorkSpace/Angular/text-to-speech/backend-libraries/StringLibrary/StringLibrary.csproj"
