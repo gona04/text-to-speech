@@ -12,6 +12,7 @@ export class AudioLibraryComponent implements OnInit {
   displayText: string = "";
   // editorText: any = '';
   isLive!: boolean;
+  textToEdit:any = {};
 
   config: AngularEditorConfig = {
     editable: true,
@@ -31,8 +32,15 @@ export class AudioLibraryComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getEditData();
   }
 
+  getEditData() {
+    this._audioLibraryService.getTobeEdited().subscribe((result: any) => {
+      this.textToEdit = result;
+      this.displayText = this.textToEdit.text;
+    })
+  }
   startService() {
     this._audioLibraryService.start();
   }

@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 declare var webkitSpeechRecognition: any;
 
@@ -32,6 +32,7 @@ export class AudioLibraryService {
     .set('Ocp-Apim-Subscription-Key', '172a80032d1c47599854ca321e141d13')
     .set('Ocp-Apim-Subscription-Region', 'centralus');
 
+    tobeEdited: BehaviorSubject<Object> = new BehaviorSubject<Object>({});
   constructor(private http: HttpClient) {
     // FOR live text to speech
     this.init();
@@ -128,6 +129,10 @@ export class AudioLibraryService {
   }
 
   sendDataTobeEdited(data: any) {
-    console.log(data);
+   this.tobeEdited.next(data);
+  }
+
+  getTobeEdited() {
+    return this.tobeEdited.asObservable();
   }
  }
